@@ -1,4 +1,3 @@
-
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
 const scoreEl = document.querySelector('#score-el')
@@ -8,7 +7,8 @@ const start = document.getElementById('start')
 const gameOverDisplay = document.getElementById('game-over')
 const restart = document.getElementById('restart')
 
-
+setTimeout(function () { gameOverDisplay.style.display = "none" }, 0);
+setTimeout(function () { restart.style.display = "none" }, 0);
 setTimeout(function () { start.style.display = " block" }, 2200);
 
 // start game when user presses enter key
@@ -378,7 +378,6 @@ invaderProjectile.position.x <= player.position.x + player.width) {
             switch (key) {
             case 'r':
             location.reload()
-            state = null;
             break
           }
           })
