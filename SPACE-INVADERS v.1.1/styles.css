@@ -1,0 +1,104 @@
+
+body{
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+canvas{
+  display: none;
+  position: relative;
+}
+
+div{
+  position: relative;
+}
+
+p{
+  position: fixed;
+  z-index: 10;
+  color: white;
+  left: 40px;
+  top: 30px;
+  margin: 0;
+  font-family: 'ArcadeClassic', sans-serif;
+  font-size: 30px;
+}
+
+#arcade{
+  width: 1000px;
+  height: 100vh;
+}
+
+#title{
+  position: absolute;
+  top: 230px;
+  left: 350px;
+  width: 300px;
+  animation: fadein 3s;
+}
+
+#score-text{
+  display: none;
+}
+
+#score-el{
+  display: none;
+}
+
+#start{
+  display: none;
+  position: absolute;
+  top: 420px;
+  left: 470px;
+  width: 70px;
+  animation: ease-in blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+
+@keyframes fadein {
+      from{
+          opacity:0;
+      }
+      to{
+          opacity:1;
+      }
+    }
+
+@keyframes fadeout {
+  .hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+}
+
+    #game-over{
+      display: none;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      animation: blink 2.2s infinite;
+    }
+
+    #restart{
+      display: none;
+      margin-top: 90%;
+      width: 400px;
+      animation: fadein 3s
+    }
